@@ -50,7 +50,7 @@ Initialize terraform in the directory:
 terraform init
 ```
 
-Check variables defined in especially credentials:
+Check variables
 ```bash
 cat ./variables.tf
 ```
