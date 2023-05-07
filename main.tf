@@ -96,7 +96,7 @@ resource "helm_release" "sonarqubeapp" {
   set {
     name  = "readinessProbe.sonarWebContext"
     value = "/sonarqube/"
-    } 
+    }
   set {
     name = "externalDatabase.port"
     value = var.db_port
