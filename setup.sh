@@ -135,6 +135,7 @@ echo_text "Waiting 30 secounds for sonarqube to startup"
 sleep 30
 echo_text "Testing page"
 curl http://$(minikube ip)/sonarqube/
+echo_text "Sonarqube url is http://$(minikube ip)/sonarqube/"
 
 
 
