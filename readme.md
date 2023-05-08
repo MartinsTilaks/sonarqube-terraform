@@ -15,4 +15,6 @@ To access page in browser get minikube ip by executing command
 minikube ip
 ```
 Url will be:
+```bash
 http://<minikube ip>/sonarqube/
+```
