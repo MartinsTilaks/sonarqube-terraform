@@ -1,6 +1,5 @@
 #!/bin/bash
-# This script will install docker, minikube, kubectl, terraform and helm
-
+# This script will install docker, minikube, kubectl, terraform, helm and deploy terraform template for sonarqube and postgresql.
 # Colors
 GREEN='\033[0;32m'
 NC='\033[0m' 
@@ -123,13 +122,14 @@ fi
 echo_text "Enabling nginx ingress addon"
 minikube addons enable ingress
 
-echo_text "Deploying ingress for SonarQube"
-kubectl apply -f ingress.yaml
+
 
 echo_text "Initializing terraform and applying templates"
 terraform init
 terraform apply -auto-approve
 
+echo_text "Deploying ingress for SonarQube"
+kubectl apply -f ingress.yaml
 
 echo_text "Waiting 30 secounds for sonarqube to startup"
 sleep 30

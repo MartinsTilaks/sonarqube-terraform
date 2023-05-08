@@ -1,4 +1,6 @@
 # Deploy Sonarqube with postgresql in Minikube
+This script will install docker, minikube, kubectl, terraform, helm and deploy terraform template for sonarqube and postgresql.
+
 
 ## Steps
 
